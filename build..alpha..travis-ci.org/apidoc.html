@@ -1,0 +1,3751 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/crypto-browserify/crypto-browserify"
+
+    >crypto-browserify (v3.11.0)</a>
+</h1>
+<h4>implementation of crypto for the browser</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify">module crypto-browserify</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Cipher
+            <span class="apidocSignatureSpan">(cipher, password, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher.super_">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Cipher.super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipheriv">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Cipheriv
+            <span class="apidocSignatureSpan">(cipher, key, iv, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipher">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Decipher
+            <span class="apidocSignatureSpan">(cipher, password, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipheriv">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Decipheriv
+            <span class="apidocSignatureSpan">(cipher, key, iv, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.DiffieHellman">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>DiffieHellman
+            <span class="apidocSignatureSpan">(sizeOrKey, keyEncoding, generator, genEncoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.DiffieHellmanGroup">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>DiffieHellmanGroup
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hash">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Hash
+            <span class="apidocSignatureSpan">(algorithm, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hmac">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Hmac
+            <span class="apidocSignatureSpan">(hmac, key, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Sign">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Sign
+            <span class="apidocSignatureSpan">(algorithm, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Verify">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Verify
+            <span class="apidocSignatureSpan">(algorithm, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createCipher">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createCipher
+            <span class="apidocSignatureSpan">(cipher, password, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createCipheriv">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createCipheriv
+            <span class="apidocSignatureSpan">(cipher, key, iv, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createCredentials">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createCredentials
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDecipher">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createDecipher
+            <span class="apidocSignatureSpan">(cipher, password, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDecipheriv">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createDecipheriv
+            <span class="apidocSignatureSpan">(cipher, key, iv, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDiffieHellman">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createDiffieHellman
+            <span class="apidocSignatureSpan">(sizeOrKey, keyEncoding, generator, genEncoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDiffieHellmanGroup">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createDiffieHellmanGroup
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createECDH">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createECDH
+            <span class="apidocSignatureSpan">(curve)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createHash">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createHash
+            <span class="apidocSignatureSpan">(algorithm, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createHmac">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createHmac
+            <span class="apidocSignatureSpan">(hmac, key, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createSign">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createSign
+            <span class="apidocSignatureSpan">(algorithm, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createVerify">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createVerify
+            <span class="apidocSignatureSpan">(algorithm, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.getCiphers">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>getCiphers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.getDiffieHellman">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>getDiffieHellman
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.getHashes">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>getHashes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.listCiphers">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>listCiphers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.pbkdf2">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>pbkdf2
+            <span class="apidocSignatureSpan">(password, salt, iterations, keylen, digest, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.pbkdf2Sync">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>pbkdf2Sync
+            <span class="apidocSignatureSpan">(password, salt, iterations, keylen, digest)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.privateDecrypt">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>privateDecrypt
+            <span class="apidocSignatureSpan">(options, buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.privateEncrypt">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>privateEncrypt
+            <span class="apidocSignatureSpan">(options, buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.prng">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>prng
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.pseudoRandomBytes">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>pseudoRandomBytes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.publicDecrypt">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>publicDecrypt
+            <span class="apidocSignatureSpan">(options, buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.publicEncrypt">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>publicEncrypt
+            <span class="apidocSignatureSpan">(options, buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.randomBytes">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>randomBytes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.rng">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>rng
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">crypto-browserify.</span>Cipher.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">crypto-browserify.</span>Cipheriv.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">crypto-browserify.</span>Decipher.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">crypto-browserify.</span>Decipheriv.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">crypto-browserify.</span>DiffieHellmanGroup.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">crypto-browserify.</span>Hash.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">crypto-browserify.</span>Hmac.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">crypto-browserify.</span>createDiffieHellman.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">crypto-browserify.</span>createSign.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">crypto-browserify.</span>createVerify.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Cipher">module crypto-browserify.Cipher</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher.Cipher">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Cipher
+            <span class="apidocSignatureSpan">(cipher, password, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher.super_">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipher.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Cipher.prototype">module crypto-browserify.Cipher.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher.prototype._flush">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>_flush
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher.prototype._transform">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher.prototype.final">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>final
+            <span class="apidocSignatureSpan">(outputEncoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher.prototype.getAuthTag">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>getAuthTag
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher.prototype.setAAD">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>setAAD
+            <span class="apidocSignatureSpan">(aadbuf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher.prototype.setAuthTag">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>setAuthTag
+            <span class="apidocSignatureSpan">(tagbuf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher.prototype.setAutoPadding">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>setAutoPadding
+            <span class="apidocSignatureSpan">(ap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher.prototype.update">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>update
+            <span class="apidocSignatureSpan">(data, inputEncoding, outputEncoding)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Cipher.super_">module crypto-browserify.Cipher.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipher.super_.super_">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipher.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Cipheriv">module crypto-browserify.Cipheriv</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipheriv.Cipheriv">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Cipheriv
+            <span class="apidocSignatureSpan">(cipher, key, iv, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipheriv.super_">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Cipheriv.prototype">module crypto-browserify.Cipheriv.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipheriv.prototype._flush">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>_flush
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipheriv.prototype._transform">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipheriv.prototype.final">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>final
+            <span class="apidocSignatureSpan">(outputEncoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipheriv.prototype.getAuthTag">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>getAuthTag
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipheriv.prototype.setAAD">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>setAAD
+            <span class="apidocSignatureSpan">(aadbuf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipheriv.prototype.setAuthTag">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>setAuthTag
+            <span class="apidocSignatureSpan">(tagbuf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipheriv.prototype.setAutoPadding">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>setAutoPadding
+            <span class="apidocSignatureSpan">(ap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Cipheriv.prototype.update">
+            function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>update
+            <span class="apidocSignatureSpan">(data, inputEncoding, outputEncoding)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Decipher">module crypto-browserify.Decipher</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipher.Decipher">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Decipher
+            <span class="apidocSignatureSpan">(cipher, password, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipher.super_">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipher.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Decipher.prototype">module crypto-browserify.Decipher.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipher.prototype._flush">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>_flush
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipher.prototype._transform">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipher.prototype.final">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>final
+            <span class="apidocSignatureSpan">(outputEncoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipher.prototype.finaltol">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>finaltol
+            <span class="apidocSignatureSpan">(outputEncoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipher.prototype.getAuthTag">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>getAuthTag
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipher.prototype.setAAD">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>setAAD
+            <span class="apidocSignatureSpan">(aadbuf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipher.prototype.setAuthTag">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>setAuthTag
+            <span class="apidocSignatureSpan">(tagbuf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipher.prototype.setAutoPadding">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>setAutoPadding
+            <span class="apidocSignatureSpan">(ap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipher.prototype.update">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>update
+            <span class="apidocSignatureSpan">(data, inputEncoding, outputEncoding)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Decipheriv">module crypto-browserify.Decipheriv</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipheriv.Decipheriv">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Decipheriv
+            <span class="apidocSignatureSpan">(cipher, key, iv, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipheriv.super_">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Decipheriv.prototype">module crypto-browserify.Decipheriv.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipheriv.prototype._flush">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>_flush
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipheriv.prototype._transform">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipheriv.prototype.final">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>final
+            <span class="apidocSignatureSpan">(outputEncoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipheriv.prototype.finaltol">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>finaltol
+            <span class="apidocSignatureSpan">(outputEncoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipheriv.prototype.getAuthTag">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>getAuthTag
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipheriv.prototype.setAAD">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>setAAD
+            <span class="apidocSignatureSpan">(aadbuf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipheriv.prototype.setAuthTag">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>setAuthTag
+            <span class="apidocSignatureSpan">(tagbuf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipheriv.prototype.setAutoPadding">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>setAutoPadding
+            <span class="apidocSignatureSpan">(ap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Decipheriv.prototype.update">
+            function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>update
+            <span class="apidocSignatureSpan">(data, inputEncoding, outputEncoding)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.DiffieHellmanGroup">module crypto-browserify.DiffieHellmanGroup</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.DiffieHellmanGroup">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>DiffieHellmanGroup
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.DiffieHellmanGroup.prototype">module crypto-browserify.DiffieHellmanGroup.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.computeSecret">
+            function <span class="apidocSignatureSpan">crypto-browserify.DiffieHellmanGroup.prototype.</span>computeSecret
+            <span class="apidocSignatureSpan">(key, inEnc, outEnc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.generateKeys">
+            function <span class="apidocSignatureSpan">crypto-browserify.DiffieHellmanGroup.prototype.</span>generateKeys
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.getGenerator">
+            function <span class="apidocSignatureSpan">crypto-browserify.DiffieHellmanGroup.prototype.</span>getGenerator
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.getPrime">
+            function <span class="apidocSignatureSpan">crypto-browserify.DiffieHellmanGroup.prototype.</span>getPrime
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.getPrivateKey">
+            function <span class="apidocSignatureSpan">crypto-browserify.DiffieHellmanGroup.prototype.</span>getPrivateKey
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.getPublicKey">
+            function <span class="apidocSignatureSpan">crypto-browserify.DiffieHellmanGroup.prototype.</span>getPublicKey
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Hash">module crypto-browserify.Hash</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hash.Hash">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Hash
+            <span class="apidocSignatureSpan">(algorithm, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hash.super_">
+            function <span class="apidocSignatureSpan">crypto-browserify.Hash.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Hash.prototype">module crypto-browserify.Hash.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hash.prototype._flush">
+            function <span class="apidocSignatureSpan">crypto-browserify.Hash.prototype.</span>_flush
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hash.prototype._transform">
+            function <span class="apidocSignatureSpan">crypto-browserify.Hash.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hash.prototype.digest">
+            function <span class="apidocSignatureSpan">crypto-browserify.Hash.prototype.</span>digest
+            <span class="apidocSignatureSpan">(outputEncoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hash.prototype.update">
+            function <span class="apidocSignatureSpan">crypto-browserify.Hash.prototype.</span>update
+            <span class="apidocSignatureSpan">(data, encoding)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Hmac">module crypto-browserify.Hmac</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hmac.Hmac">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>Hmac
+            <span class="apidocSignatureSpan">(hmac, key, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hmac.super_">
+            function <span class="apidocSignatureSpan">crypto-browserify.Hmac.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.Hmac.prototype">module crypto-browserify.Hmac.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hmac.prototype._flush">
+            function <span class="apidocSignatureSpan">crypto-browserify.Hmac.prototype.</span>_flush
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hmac.prototype._transform">
+            function <span class="apidocSignatureSpan">crypto-browserify.Hmac.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hmac.prototype.digest">
+            function <span class="apidocSignatureSpan">crypto-browserify.Hmac.prototype.</span>digest
+            <span class="apidocSignatureSpan">(outputEncoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.Hmac.prototype.update">
+            function <span class="apidocSignatureSpan">crypto-browserify.Hmac.prototype.</span>update
+            <span class="apidocSignatureSpan">(data, encoding)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.createDiffieHellman">module crypto-browserify.createDiffieHellman</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDiffieHellman.createDiffieHellman">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createDiffieHellman
+            <span class="apidocSignatureSpan">(sizeOrKey, keyEncoding, generator, genEncoding)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.createDiffieHellman.prototype">module crypto-browserify.createDiffieHellman.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.computeSecret">
+            function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>computeSecret
+            <span class="apidocSignatureSpan">(key, inEnc, outEnc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.generateKeys">
+            function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>generateKeys
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.getGenerator">
+            function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>getGenerator
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.getPrime">
+            function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>getPrime
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.getPrivateKey">
+            function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>getPrivateKey
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.getPublicKey">
+            function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>getPublicKey
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.setPrivateKey">
+            function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>setPrivateKey
+            <span class="apidocSignatureSpan">(key, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.setPublicKey">
+            function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>setPublicKey
+            <span class="apidocSignatureSpan">(key, encoding)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.createSign">module crypto-browserify.createSign</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createSign.createSign">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createSign
+            <span class="apidocSignatureSpan">(algorithm, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createSign.super_">
+            function <span class="apidocSignatureSpan">crypto-browserify.createSign.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.createSign.prototype">module crypto-browserify.createSign.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createSign.prototype._write">
+            function <span class="apidocSignatureSpan">crypto-browserify.createSign.prototype.</span>_write
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createSign.prototype.sign">
+            function <span class="apidocSignatureSpan">crypto-browserify.createSign.prototype.</span>sign
+            <span class="apidocSignatureSpan">(options, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createSign.prototype.update">
+            function <span class="apidocSignatureSpan">crypto-browserify.createSign.prototype.</span>update
+            <span class="apidocSignatureSpan">(data, encoding)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.createVerify">module crypto-browserify.createVerify</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createVerify.createVerify">
+            function <span class="apidocSignatureSpan">crypto-browserify.</span>createVerify
+            <span class="apidocSignatureSpan">(algorithm, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createVerify.super_">
+            function <span class="apidocSignatureSpan">crypto-browserify.createVerify.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.crypto-browserify.createVerify.prototype">module crypto-browserify.createVerify.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createVerify.prototype._write">
+            function <span class="apidocSignatureSpan">crypto-browserify.createVerify.prototype.</span>_write
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createVerify.prototype.update">
+            function <span class="apidocSignatureSpan">crypto-browserify.createVerify.prototype.</span>update
+            <span class="apidocSignatureSpan">(data, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.crypto-browserify.createVerify.prototype.verify">
+            function <span class="apidocSignatureSpan">crypto-browserify.createVerify.prototype.</span>verify
+            <span class="apidocSignatureSpan">(object, signature, sigEncoding)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify" id="apidoc.module.crypto-browserify">module crypto-browserify</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher" id="apidoc.element.crypto-browserify.Cipher">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Cipher
+        <span class="apidocSignatureSpan">(cipher, password, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cipher(cipher, password, options) {
+  if (!(this instanceof Cipher))
+    return new Cipher(cipher, password, options);
+  this._handle = new binding.CipherBase(true);
+
+  this._handle.init(cipher, toBuf(password));
+  this._decoder = null;
+
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher.super_" id="apidoc.element.crypto-browserify.Cipher.super_">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Cipher.super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LazyTransform(options) {
+  this._options = options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipheriv" id="apidoc.element.crypto-browserify.Cipheriv">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Cipheriv
+        <span class="apidocSignatureSpan">(cipher, key, iv, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cipheriv(cipher, key, iv, options) {
+  if (!(this instanceof Cipheriv))
+    return new Cipheriv(cipher, key, iv, options);
+  this._handle = new binding.CipherBase(true);
+  this._handle.initiv(cipher, toBuf(key), toBuf(iv));
+  this._decoder = null;
+
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipher" id="apidoc.element.crypto-browserify.Decipher">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Decipher
+        <span class="apidocSignatureSpan">(cipher, password, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Decipher(cipher, password, options) {
+  if (!(this instanceof Decipher))
+    return new Decipher(cipher, password, options);
+
+  this._handle = new binding.CipherBase(false);
+  this._handle.init(cipher, toBuf(password));
+  this._decoder = null;
+
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipheriv" id="apidoc.element.crypto-browserify.Decipheriv">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Decipheriv
+        <span class="apidocSignatureSpan">(cipher, key, iv, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Decipheriv(cipher, key, iv, options) {
+  if (!(this instanceof Decipheriv))
+    return new Decipheriv(cipher, key, iv, options);
+
+  this._handle = new binding.CipherBase(false);
+  this._handle.initiv(cipher, toBuf(key), toBuf(iv));
+  this._decoder = null;
+
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.DiffieHellman" id="apidoc.element.crypto-browserify.DiffieHellman">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>DiffieHellman
+        <span class="apidocSignatureSpan">(sizeOrKey, keyEncoding, generator, genEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DiffieHellman(sizeOrKey, keyEncoding, generator, genEncoding) {
+  if (!(this instanceof DiffieHellman))
+    return new DiffieHellman(sizeOrKey, keyEncoding, generator, genEncoding);
+
+  if (!(sizeOrKey instanceof Buffer) &#x26;&#x26;
+      typeof sizeOrKey !== &#x27;number&#x27; &#x26;&#x26;
+      typeof sizeOrKey !== &#x27;string&#x27;)
+    throw new TypeError(&#x27;First argument should be number, string or Buffer&#x27;);
+
+  if (keyEncoding) {
+    if (typeof keyEncoding !== &#x27;string&#x27; ||
+        (!Buffer.isEncoding(keyEncoding) &#x26;&#x26; keyEncoding !== &#x27;buffer&#x27;)) {
+      genEncoding = generator;
+      generator = keyEncoding;
+      keyEncoding = false;
+    }
+  }
+
+  keyEncoding = keyEncoding || exports.DEFAULT_ENCODING;
+  genEncoding = genEncoding || exports.DEFAULT_ENCODING;
+
+  if (typeof sizeOrKey !== &#x27;number&#x27;)
+    sizeOrKey = toBuf(sizeOrKey, keyEncoding);
+
+  if (!generator)
+    generator = DH_GENERATOR;
+  else if (typeof generator !== &#x27;number&#x27;)
+    generator = toBuf(generator, genEncoding);
+
+  this._handle = new binding.DiffieHellman(sizeOrKey, generator);
+  Object.defineProperty(this, &#x27;verifyError&#x27;, {
+    enumerable: true,
+    value: this._handle.verifyError,
+    writable: false
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.DiffieHellmanGroup" id="apidoc.element.crypto-browserify.DiffieHellmanGroup">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>DiffieHellmanGroup
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DiffieHellmanGroup(name) {
+  if (!(this instanceof DiffieHellmanGroup))
+    return new DiffieHellmanGroup(name);
+  this._handle = new binding.DiffieHellmanGroup(name);
+  Object.defineProperty(this, &#x27;verifyError&#x27;, {
+    enumerable: true,
+    value: this._handle.verifyError,
+    writable: false
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hash" id="apidoc.element.crypto-browserify.Hash">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Hash
+        <span class="apidocSignatureSpan">(algorithm, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Hash(algorithm, options) {
+  if (!(this instanceof Hash))
+    return new Hash(algorithm, options);
+  this._handle = new binding.Hash(algorithm);
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hmac" id="apidoc.element.crypto-browserify.Hmac">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Hmac
+        <span class="apidocSignatureSpan">(hmac, key, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Hmac(hmac, key, options) {
+  if (!(this instanceof Hmac))
+    return new Hmac(hmac, key, options);
+  this._handle = new binding.Hmac();
+  this._handle.init(hmac, toBuf(key));
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Sign" id="apidoc.element.crypto-browserify.Sign">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Sign
+        <span class="apidocSignatureSpan">(algorithm, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sign(algorithm, options) {
+  if (!(this instanceof Sign))
+    return new Sign(algorithm, options);
+  this._handle = new binding.Sign();
+  this._handle.init(algorithm);
+
+  stream.Writable.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Verify" id="apidoc.element.crypto-browserify.Verify">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Verify
+        <span class="apidocSignatureSpan">(algorithm, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Verify(algorithm, options) {
+  if (!(this instanceof Verify))
+    return new Verify(algorithm, options);
+
+  this._handle = new binding.Verify();
+  this._handle.init(algorithm);
+
+  stream.Writable.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createCipher" id="apidoc.element.crypto-browserify.createCipher">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createCipher
+        <span class="apidocSignatureSpan">(cipher, password, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cipher(cipher, password, options) {
+  if (!(this instanceof Cipher))
+    return new Cipher(cipher, password, options);
+  this._handle = new binding.CipherBase(true);
+
+  this._handle.init(cipher, toBuf(password));
+  this._decoder = null;
+
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createCipheriv" id="apidoc.element.crypto-browserify.createCipheriv">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createCipheriv
+        <span class="apidocSignatureSpan">(cipher, key, iv, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cipheriv(cipher, key, iv, options) {
+  if (!(this instanceof Cipheriv))
+    return new Cipheriv(cipher, key, iv, options);
+  this._handle = new binding.CipherBase(true);
+  this._handle.initiv(cipher, toBuf(key), toBuf(iv));
+  this._decoder = null;
+
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createCredentials" id="apidoc.element.crypto-browserify.createCredentials">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createCredentials
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createCredentials = function () {
+  throw new Error([
+    &#x27;sorry, &#x27; + name + &#x27; is not implemented yet&#x27;,
+    &#x27;we accept pull requests&#x27;,
+    &#x27;https://github.com/crypto-browserify/crypto-browserify&#x27;
+  ].join(&#x27;\n&#x27;))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDecipher" id="apidoc.element.crypto-browserify.createDecipher">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createDecipher
+        <span class="apidocSignatureSpan">(cipher, password, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Decipher(cipher, password, options) {
+  if (!(this instanceof Decipher))
+    return new Decipher(cipher, password, options);
+
+  this._handle = new binding.CipherBase(false);
+  this._handle.init(cipher, toBuf(password));
+  this._decoder = null;
+
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDecipheriv" id="apidoc.element.crypto-browserify.createDecipheriv">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createDecipheriv
+        <span class="apidocSignatureSpan">(cipher, key, iv, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Decipheriv(cipher, key, iv, options) {
+  if (!(this instanceof Decipheriv))
+    return new Decipheriv(cipher, key, iv, options);
+
+  this._handle = new binding.CipherBase(false);
+  this._handle.initiv(cipher, toBuf(key), toBuf(iv));
+  this._decoder = null;
+
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDiffieHellman" id="apidoc.element.crypto-browserify.createDiffieHellman">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createDiffieHellman
+        <span class="apidocSignatureSpan">(sizeOrKey, keyEncoding, generator, genEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DiffieHellman(sizeOrKey, keyEncoding, generator, genEncoding) {
+  if (!(this instanceof DiffieHellman))
+    return new DiffieHellman(sizeOrKey, keyEncoding, generator, genEncoding);
+
+  if (!(sizeOrKey instanceof Buffer) &#x26;&#x26;
+      typeof sizeOrKey !== &#x27;number&#x27; &#x26;&#x26;
+      typeof sizeOrKey !== &#x27;string&#x27;)
+    throw new TypeError(&#x27;First argument should be number, string or Buffer&#x27;);
+
+  if (keyEncoding) {
+    if (typeof keyEncoding !== &#x27;string&#x27; ||
+        (!Buffer.isEncoding(keyEncoding) &#x26;&#x26; keyEncoding !== &#x27;buffer&#x27;)) {
+      genEncoding = generator;
+      generator = keyEncoding;
+      keyEncoding = false;
+    }
+  }
+
+  keyEncoding = keyEncoding || exports.DEFAULT_ENCODING;
+  genEncoding = genEncoding || exports.DEFAULT_ENCODING;
+
+  if (typeof sizeOrKey !== &#x27;number&#x27;)
+    sizeOrKey = toBuf(sizeOrKey, keyEncoding);
+
+  if (!generator)
+    generator = DH_GENERATOR;
+  else if (typeof generator !== &#x27;number&#x27;)
+    generator = toBuf(generator, genEncoding);
+
+  this._handle = new binding.DiffieHellman(sizeOrKey, generator);
+  Object.defineProperty(this, &#x27;verifyError&#x27;, {
+    enumerable: true,
+    value: this._handle.verifyError,
+    writable: false
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDiffieHellmanGroup" id="apidoc.element.crypto-browserify.createDiffieHellmanGroup">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createDiffieHellmanGroup
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DiffieHellmanGroup(name) {
+  if (!(this instanceof DiffieHellmanGroup))
+    return new DiffieHellmanGroup(name);
+  this._handle = new binding.DiffieHellmanGroup(name);
+  Object.defineProperty(this, &#x27;verifyError&#x27;, {
+    enumerable: true,
+    value: this._handle.verifyError,
+    writable: false
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createECDH" id="apidoc.element.crypto-browserify.createECDH">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createECDH
+        <span class="apidocSignatureSpan">(curve)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createECDH(curve) {
+  return new ECDH(curve);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createHash" id="apidoc.element.crypto-browserify.createHash">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createHash
+        <span class="apidocSignatureSpan">(algorithm, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Hash(algorithm, options) {
+  if (!(this instanceof Hash))
+    return new Hash(algorithm, options);
+  this._handle = new binding.Hash(algorithm);
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createHmac" id="apidoc.element.crypto-browserify.createHmac">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createHmac
+        <span class="apidocSignatureSpan">(hmac, key, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Hmac(hmac, key, options) {
+  if (!(this instanceof Hmac))
+    return new Hmac(hmac, key, options);
+  this._handle = new binding.Hmac();
+  this._handle.init(hmac, toBuf(key));
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createSign" id="apidoc.element.crypto-browserify.createSign">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createSign
+        <span class="apidocSignatureSpan">(algorithm, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sign(algorithm, options) {
+  if (!(this instanceof Sign))
+    return new Sign(algorithm, options);
+  this._handle = new binding.Sign();
+  this._handle.init(algorithm);
+
+  stream.Writable.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createVerify" id="apidoc.element.crypto-browserify.createVerify">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createVerify
+        <span class="apidocSignatureSpan">(algorithm, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Verify(algorithm, options) {
+  if (!(this instanceof Verify))
+    return new Verify(algorithm, options);
+
+  this._handle = new binding.Verify();
+  this._handle.init(algorithm);
+
+  stream.Writable.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.getCiphers" id="apidoc.element.crypto-browserify.getCiphers">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>getCiphers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&#x3e; {
+  if (result === undefined)
+    result = fn();
+  return result.slice();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.getDiffieHellman" id="apidoc.element.crypto-browserify.getDiffieHellman">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>getDiffieHellman
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DiffieHellmanGroup(name) {
+  if (!(this instanceof DiffieHellmanGroup))
+    return new DiffieHellmanGroup(name);
+  this._handle = new binding.DiffieHellmanGroup(name);
+  Object.defineProperty(this, &#x27;verifyError&#x27;, {
+    enumerable: true,
+    value: this._handle.verifyError,
+    writable: false
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.getHashes" id="apidoc.element.crypto-browserify.getHashes">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>getHashes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHashes = function () {
+  return hashes
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.listCiphers" id="apidoc.element.crypto-browserify.listCiphers">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>listCiphers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">() =&#x3e; {
+  if (result === undefined)
+    result = fn();
+  return result.slice();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.pbkdf2" id="apidoc.element.crypto-browserify.pbkdf2">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>pbkdf2
+        <span class="apidocSignatureSpan">(password, salt, iterations, keylen, digest, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pbkdf2 = function (password, salt, iterations, keylen, digest, callback) {
+  if (typeof digest === &#x27;function&#x27;) {
+    callback = digest;
+    digest = undefined;
+    pbkdf2DeprecationWarning();
+  }
+
+  if (typeof callback !== &#x27;function&#x27;)
+    throw new Error(&#x27;No callback provided to pbkdf2&#x27;);
+
+  return pbkdf2(password, salt, iterations, keylen, digest, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.pbkdf2Sync" id="apidoc.element.crypto-browserify.pbkdf2Sync">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>pbkdf2Sync
+        <span class="apidocSignatureSpan">(password, salt, iterations, keylen, digest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pbkdf2Sync = function (password, salt, iterations, keylen, digest) {
+  if (typeof digest === &#x27;undefined&#x27;) {
+    digest = undefined;
+    pbkdf2DeprecationWarning();
+  }
+  return pbkdf2(password, salt, iterations, keylen, digest);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.privateDecrypt" id="apidoc.element.crypto-browserify.privateDecrypt">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>privateDecrypt
+        <span class="apidocSignatureSpan">(options, buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">privateDecrypt = function (options, buffer) {
+  var key = options.key || options;
+  var passphrase = options.passphrase || null;
+  var padding = options.padding || defaultPadding;
+  return method(toBuf(key), buffer, padding, passphrase);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.privateEncrypt" id="apidoc.element.crypto-browserify.privateEncrypt">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>privateEncrypt
+        <span class="apidocSignatureSpan">(options, buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">privateEncrypt = function (options, buffer) {
+  var key = options.key || options;
+  var passphrase = options.passphrase || null;
+  var padding = options.padding || defaultPadding;
+  return method(toBuf(key), buffer, padding, passphrase);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.prng" id="apidoc.element.crypto-browserify.prng">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>prng
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomBytes() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.pseudoRandomBytes" id="apidoc.element.crypto-browserify.pseudoRandomBytes">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>pseudoRandomBytes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomBytes() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.publicDecrypt" id="apidoc.element.crypto-browserify.publicDecrypt">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>publicDecrypt
+        <span class="apidocSignatureSpan">(options, buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">publicDecrypt = function (options, buffer) {
+  var key = options.key || options;
+  var padding = options.padding || defaultPadding;
+  var passphrase = options.passphrase || null;
+  return method(toBuf(key), buffer, padding, passphrase);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.publicEncrypt" id="apidoc.element.crypto-browserify.publicEncrypt">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>publicEncrypt
+        <span class="apidocSignatureSpan">(options, buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">publicEncrypt = function (options, buffer) {
+  var key = options.key || options;
+  var padding = options.padding || defaultPadding;
+  var passphrase = options.passphrase || null;
+  return method(toBuf(key), buffer, padding, passphrase);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.randomBytes" id="apidoc.element.crypto-browserify.randomBytes">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>randomBytes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomBytes() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.rng" id="apidoc.element.crypto-browserify.rng">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>rng
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomBytes() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Cipher" id="apidoc.module.crypto-browserify.Cipher">module crypto-browserify.Cipher</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher.Cipher" id="apidoc.element.crypto-browserify.Cipher.Cipher">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Cipher
+        <span class="apidocSignatureSpan">(cipher, password, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cipher(cipher, password, options) {
+  if (!(this instanceof Cipher))
+    return new Cipher(cipher, password, options);
+  this._handle = new binding.CipherBase(true);
+
+  this._handle.init(cipher, toBuf(password));
+  this._decoder = null;
+
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher.super_" id="apidoc.element.crypto-browserify.Cipher.super_">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipher.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LazyTransform(options) {
+  this._options = options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Cipher.prototype" id="apidoc.module.crypto-browserify.Cipher.prototype">module crypto-browserify.Cipher.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher.prototype._flush" id="apidoc.element.crypto-browserify.Cipher.prototype._flush">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>_flush
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_flush = function (callback) {
+  try {
+    this.push(this._handle.final());
+  } catch (e) {
+    callback(e);
+    return;
+  }
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher.prototype._transform" id="apidoc.element.crypto-browserify.Cipher.prototype._transform">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_transform = function (chunk, encoding, callback) {
+  this.push(this._handle.update(chunk, encoding));
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher.prototype.final" id="apidoc.element.crypto-browserify.Cipher.prototype.final">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>final
+        <span class="apidocSignatureSpan">(outputEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">final = function (outputEncoding) {
+  outputEncoding = outputEncoding || exports.DEFAULT_ENCODING;
+  var ret = this._handle.final();
+
+  if (outputEncoding &#x26;&#x26; outputEncoding !== &#x27;buffer&#x27;) {
+    this._decoder = getDecoder(this._decoder, outputEncoding);
+    ret = this._decoder.end(ret);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher.prototype.getAuthTag" id="apidoc.element.crypto-browserify.Cipher.prototype.getAuthTag">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>getAuthTag
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAuthTag = function () {
+  return this._handle.getAuthTag();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher.prototype.setAAD" id="apidoc.element.crypto-browserify.Cipher.prototype.setAAD">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>setAAD
+        <span class="apidocSignatureSpan">(aadbuf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAAD = function (aadbuf) {
+  this._handle.setAAD(aadbuf);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher.prototype.setAuthTag" id="apidoc.element.crypto-browserify.Cipher.prototype.setAuthTag">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>setAuthTag
+        <span class="apidocSignatureSpan">(tagbuf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAuthTag = function (tagbuf) {
+  this._handle.setAuthTag(tagbuf);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher.prototype.setAutoPadding" id="apidoc.element.crypto-browserify.Cipher.prototype.setAutoPadding">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>setAutoPadding
+        <span class="apidocSignatureSpan">(ap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAutoPadding = function (ap) {
+  this._handle.setAutoPadding(ap);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher.prototype.update" id="apidoc.element.crypto-browserify.Cipher.prototype.update">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipher.prototype.</span>update
+        <span class="apidocSignatureSpan">(data, inputEncoding, outputEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (data, inputEncoding, outputEncoding) {
+  inputEncoding = inputEncoding || exports.DEFAULT_ENCODING;
+  outputEncoding = outputEncoding || exports.DEFAULT_ENCODING;
+
+  var ret = this._handle.update(data, inputEncoding);
+
+  if (outputEncoding &#x26;&#x26; outputEncoding !== &#x27;buffer&#x27;) {
+    this._decoder = getDecoder(this._decoder, outputEncoding);
+    ret = this._decoder.write(ret);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Cipher.super_" id="apidoc.module.crypto-browserify.Cipher.super_">module crypto-browserify.Cipher.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipher.super_.super_" id="apidoc.element.crypto-browserify.Cipher.super_.super_">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipher.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transform(options) {
+  if (!(this instanceof Transform))
+    return new Transform(options);
+
+  Duplex.call(this, options);
+
+  this._transformState = new TransformState(this);
+
+  var stream = this;
+
+  // start out asking for a readable event once data is transformed.
+  this._readableState.needReadable = true;
+
+  // we have implemented the _read method, and done the other things
+  // that Readable wants before the first _read call, so unset the
+  // sync guard flag.
+  this._readableState.sync = false;
+
+  if (options) {
+    if (typeof options.transform === &#x27;function&#x27;)
+      this._transform = options.transform;
+
+    if (typeof options.flush === &#x27;function&#x27;)
+      this._flush = options.flush;
+  }
+
+  // When the writable side finishes, then flush out anything remaining.
+  this.once(&#x27;prefinish&#x27;, function() {
+    if (typeof this._flush === &#x27;function&#x27;)
+      this._flush(function(er) {
+        done(stream, er);
+      });
+    else
+      done(stream);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Cipheriv" id="apidoc.module.crypto-browserify.Cipheriv">module crypto-browserify.Cipheriv</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipheriv.Cipheriv" id="apidoc.element.crypto-browserify.Cipheriv.Cipheriv">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Cipheriv
+        <span class="apidocSignatureSpan">(cipher, key, iv, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cipheriv(cipher, key, iv, options) {
+  if (!(this instanceof Cipheriv))
+    return new Cipheriv(cipher, key, iv, options);
+  this._handle = new binding.CipherBase(true);
+  this._handle.initiv(cipher, toBuf(key), toBuf(iv));
+  this._decoder = null;
+
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipheriv.super_" id="apidoc.element.crypto-browserify.Cipheriv.super_">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LazyTransform(options) {
+  this._options = options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Cipheriv.prototype" id="apidoc.module.crypto-browserify.Cipheriv.prototype">module crypto-browserify.Cipheriv.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipheriv.prototype._flush" id="apidoc.element.crypto-browserify.Cipheriv.prototype._flush">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>_flush
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_flush = function (callback) {
+  try {
+    this.push(this._handle.final());
+  } catch (e) {
+    callback(e);
+    return;
+  }
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipheriv.prototype._transform" id="apidoc.element.crypto-browserify.Cipheriv.prototype._transform">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_transform = function (chunk, encoding, callback) {
+  this.push(this._handle.update(chunk, encoding));
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipheriv.prototype.final" id="apidoc.element.crypto-browserify.Cipheriv.prototype.final">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>final
+        <span class="apidocSignatureSpan">(outputEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">final = function (outputEncoding) {
+  outputEncoding = outputEncoding || exports.DEFAULT_ENCODING;
+  var ret = this._handle.final();
+
+  if (outputEncoding &#x26;&#x26; outputEncoding !== &#x27;buffer&#x27;) {
+    this._decoder = getDecoder(this._decoder, outputEncoding);
+    ret = this._decoder.end(ret);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipheriv.prototype.getAuthTag" id="apidoc.element.crypto-browserify.Cipheriv.prototype.getAuthTag">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>getAuthTag
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAuthTag = function () {
+  return this._handle.getAuthTag();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipheriv.prototype.setAAD" id="apidoc.element.crypto-browserify.Cipheriv.prototype.setAAD">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>setAAD
+        <span class="apidocSignatureSpan">(aadbuf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAAD = function (aadbuf) {
+  this._handle.setAAD(aadbuf);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipheriv.prototype.setAuthTag" id="apidoc.element.crypto-browserify.Cipheriv.prototype.setAuthTag">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>setAuthTag
+        <span class="apidocSignatureSpan">(tagbuf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAuthTag = function (tagbuf) {
+  this._handle.setAuthTag(tagbuf);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipheriv.prototype.setAutoPadding" id="apidoc.element.crypto-browserify.Cipheriv.prototype.setAutoPadding">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>setAutoPadding
+        <span class="apidocSignatureSpan">(ap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAutoPadding = function (ap) {
+  this._handle.setAutoPadding(ap);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Cipheriv.prototype.update" id="apidoc.element.crypto-browserify.Cipheriv.prototype.update">
+        function <span class="apidocSignatureSpan">crypto-browserify.Cipheriv.prototype.</span>update
+        <span class="apidocSignatureSpan">(data, inputEncoding, outputEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (data, inputEncoding, outputEncoding) {
+  inputEncoding = inputEncoding || exports.DEFAULT_ENCODING;
+  outputEncoding = outputEncoding || exports.DEFAULT_ENCODING;
+
+  var ret = this._handle.update(data, inputEncoding);
+
+  if (outputEncoding &#x26;&#x26; outputEncoding !== &#x27;buffer&#x27;) {
+    this._decoder = getDecoder(this._decoder, outputEncoding);
+    ret = this._decoder.write(ret);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Decipher" id="apidoc.module.crypto-browserify.Decipher">module crypto-browserify.Decipher</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipher.Decipher" id="apidoc.element.crypto-browserify.Decipher.Decipher">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Decipher
+        <span class="apidocSignatureSpan">(cipher, password, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Decipher(cipher, password, options) {
+  if (!(this instanceof Decipher))
+    return new Decipher(cipher, password, options);
+
+  this._handle = new binding.CipherBase(false);
+  this._handle.init(cipher, toBuf(password));
+  this._decoder = null;
+
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipher.super_" id="apidoc.element.crypto-browserify.Decipher.super_">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipher.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LazyTransform(options) {
+  this._options = options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Decipher.prototype" id="apidoc.module.crypto-browserify.Decipher.prototype">module crypto-browserify.Decipher.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipher.prototype._flush" id="apidoc.element.crypto-browserify.Decipher.prototype._flush">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>_flush
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_flush = function (callback) {
+  try {
+    this.push(this._handle.final());
+  } catch (e) {
+    callback(e);
+    return;
+  }
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipher.prototype._transform" id="apidoc.element.crypto-browserify.Decipher.prototype._transform">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_transform = function (chunk, encoding, callback) {
+  this.push(this._handle.update(chunk, encoding));
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipher.prototype.final" id="apidoc.element.crypto-browserify.Decipher.prototype.final">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>final
+        <span class="apidocSignatureSpan">(outputEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">final = function (outputEncoding) {
+  outputEncoding = outputEncoding || exports.DEFAULT_ENCODING;
+  var ret = this._handle.final();
+
+  if (outputEncoding &#x26;&#x26; outputEncoding !== &#x27;buffer&#x27;) {
+    this._decoder = getDecoder(this._decoder, outputEncoding);
+    ret = this._decoder.end(ret);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipher.prototype.finaltol" id="apidoc.element.crypto-browserify.Decipher.prototype.finaltol">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>finaltol
+        <span class="apidocSignatureSpan">(outputEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">finaltol = function (outputEncoding) {
+  outputEncoding = outputEncoding || exports.DEFAULT_ENCODING;
+  var ret = this._handle.final();
+
+  if (outputEncoding &#x26;&#x26; outputEncoding !== &#x27;buffer&#x27;) {
+    this._decoder = getDecoder(this._decoder, outputEncoding);
+    ret = this._decoder.end(ret);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipher.prototype.getAuthTag" id="apidoc.element.crypto-browserify.Decipher.prototype.getAuthTag">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>getAuthTag
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAuthTag = function () {
+  return this._handle.getAuthTag();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipher.prototype.setAAD" id="apidoc.element.crypto-browserify.Decipher.prototype.setAAD">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>setAAD
+        <span class="apidocSignatureSpan">(aadbuf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAAD = function (aadbuf) {
+  this._handle.setAAD(aadbuf);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipher.prototype.setAuthTag" id="apidoc.element.crypto-browserify.Decipher.prototype.setAuthTag">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>setAuthTag
+        <span class="apidocSignatureSpan">(tagbuf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAuthTag = function (tagbuf) {
+  this._handle.setAuthTag(tagbuf);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipher.prototype.setAutoPadding" id="apidoc.element.crypto-browserify.Decipher.prototype.setAutoPadding">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>setAutoPadding
+        <span class="apidocSignatureSpan">(ap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAutoPadding = function (ap) {
+  this._handle.setAutoPadding(ap);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipher.prototype.update" id="apidoc.element.crypto-browserify.Decipher.prototype.update">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipher.prototype.</span>update
+        <span class="apidocSignatureSpan">(data, inputEncoding, outputEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (data, inputEncoding, outputEncoding) {
+  inputEncoding = inputEncoding || exports.DEFAULT_ENCODING;
+  outputEncoding = outputEncoding || exports.DEFAULT_ENCODING;
+
+  var ret = this._handle.update(data, inputEncoding);
+
+  if (outputEncoding &#x26;&#x26; outputEncoding !== &#x27;buffer&#x27;) {
+    this._decoder = getDecoder(this._decoder, outputEncoding);
+    ret = this._decoder.write(ret);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Decipheriv" id="apidoc.module.crypto-browserify.Decipheriv">module crypto-browserify.Decipheriv</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipheriv.Decipheriv" id="apidoc.element.crypto-browserify.Decipheriv.Decipheriv">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Decipheriv
+        <span class="apidocSignatureSpan">(cipher, key, iv, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Decipheriv(cipher, key, iv, options) {
+  if (!(this instanceof Decipheriv))
+    return new Decipheriv(cipher, key, iv, options);
+
+  this._handle = new binding.CipherBase(false);
+  this._handle.initiv(cipher, toBuf(key), toBuf(iv));
+  this._decoder = null;
+
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipheriv.super_" id="apidoc.element.crypto-browserify.Decipheriv.super_">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LazyTransform(options) {
+  this._options = options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Decipheriv.prototype" id="apidoc.module.crypto-browserify.Decipheriv.prototype">module crypto-browserify.Decipheriv.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipheriv.prototype._flush" id="apidoc.element.crypto-browserify.Decipheriv.prototype._flush">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>_flush
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_flush = function (callback) {
+  try {
+    this.push(this._handle.final());
+  } catch (e) {
+    callback(e);
+    return;
+  }
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipheriv.prototype._transform" id="apidoc.element.crypto-browserify.Decipheriv.prototype._transform">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_transform = function (chunk, encoding, callback) {
+  this.push(this._handle.update(chunk, encoding));
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipheriv.prototype.final" id="apidoc.element.crypto-browserify.Decipheriv.prototype.final">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>final
+        <span class="apidocSignatureSpan">(outputEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">final = function (outputEncoding) {
+  outputEncoding = outputEncoding || exports.DEFAULT_ENCODING;
+  var ret = this._handle.final();
+
+  if (outputEncoding &#x26;&#x26; outputEncoding !== &#x27;buffer&#x27;) {
+    this._decoder = getDecoder(this._decoder, outputEncoding);
+    ret = this._decoder.end(ret);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipheriv.prototype.finaltol" id="apidoc.element.crypto-browserify.Decipheriv.prototype.finaltol">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>finaltol
+        <span class="apidocSignatureSpan">(outputEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">finaltol = function (outputEncoding) {
+  outputEncoding = outputEncoding || exports.DEFAULT_ENCODING;
+  var ret = this._handle.final();
+
+  if (outputEncoding &#x26;&#x26; outputEncoding !== &#x27;buffer&#x27;) {
+    this._decoder = getDecoder(this._decoder, outputEncoding);
+    ret = this._decoder.end(ret);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipheriv.prototype.getAuthTag" id="apidoc.element.crypto-browserify.Decipheriv.prototype.getAuthTag">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>getAuthTag
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAuthTag = function () {
+  return this._handle.getAuthTag();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipheriv.prototype.setAAD" id="apidoc.element.crypto-browserify.Decipheriv.prototype.setAAD">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>setAAD
+        <span class="apidocSignatureSpan">(aadbuf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAAD = function (aadbuf) {
+  this._handle.setAAD(aadbuf);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipheriv.prototype.setAuthTag" id="apidoc.element.crypto-browserify.Decipheriv.prototype.setAuthTag">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>setAuthTag
+        <span class="apidocSignatureSpan">(tagbuf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAuthTag = function (tagbuf) {
+  this._handle.setAuthTag(tagbuf);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipheriv.prototype.setAutoPadding" id="apidoc.element.crypto-browserify.Decipheriv.prototype.setAutoPadding">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>setAutoPadding
+        <span class="apidocSignatureSpan">(ap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAutoPadding = function (ap) {
+  this._handle.setAutoPadding(ap);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Decipheriv.prototype.update" id="apidoc.element.crypto-browserify.Decipheriv.prototype.update">
+        function <span class="apidocSignatureSpan">crypto-browserify.Decipheriv.prototype.</span>update
+        <span class="apidocSignatureSpan">(data, inputEncoding, outputEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (data, inputEncoding, outputEncoding) {
+  inputEncoding = inputEncoding || exports.DEFAULT_ENCODING;
+  outputEncoding = outputEncoding || exports.DEFAULT_ENCODING;
+
+  var ret = this._handle.update(data, inputEncoding);
+
+  if (outputEncoding &#x26;&#x26; outputEncoding !== &#x27;buffer&#x27;) {
+    this._decoder = getDecoder(this._decoder, outputEncoding);
+    ret = this._decoder.write(ret);
+  }
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.DiffieHellmanGroup" id="apidoc.module.crypto-browserify.DiffieHellmanGroup">module crypto-browserify.DiffieHellmanGroup</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.DiffieHellmanGroup" id="apidoc.element.crypto-browserify.DiffieHellmanGroup.DiffieHellmanGroup">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>DiffieHellmanGroup
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DiffieHellmanGroup(name) {
+  if (!(this instanceof DiffieHellmanGroup))
+    return new DiffieHellmanGroup(name);
+  this._handle = new binding.DiffieHellmanGroup(name);
+  Object.defineProperty(this, &#x27;verifyError&#x27;, {
+    enumerable: true,
+    value: this._handle.verifyError,
+    writable: false
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.DiffieHellmanGroup.prototype" id="apidoc.module.crypto-browserify.DiffieHellmanGroup.prototype">module crypto-browserify.DiffieHellmanGroup.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.computeSecret" id="apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.computeSecret">
+        function <span class="apidocSignatureSpan">crypto-browserify.DiffieHellmanGroup.prototype.</span>computeSecret
+        <span class="apidocSignatureSpan">(key, inEnc, outEnc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dhComputeSecret(key, inEnc, outEnc) {
+  inEnc = inEnc || exports.DEFAULT_ENCODING;
+  outEnc = outEnc || exports.DEFAULT_ENCODING;
+  var ret = this._handle.computeSecret(toBuf(key, inEnc));
+  if (outEnc &#x26;&#x26; outEnc !== &#x27;buffer&#x27;)
+    ret = ret.toString(outEnc);
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.generateKeys" id="apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.generateKeys">
+        function <span class="apidocSignatureSpan">crypto-browserify.DiffieHellmanGroup.prototype.</span>generateKeys
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dhGenerateKeys(encoding) {
+  var keys = this._handle.generateKeys();
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  if (encoding &#x26;&#x26; encoding !== &#x27;buffer&#x27;)
+    keys = keys.toString(encoding);
+  return keys;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.getGenerator" id="apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.getGenerator">
+        function <span class="apidocSignatureSpan">crypto-browserify.DiffieHellmanGroup.prototype.</span>getGenerator
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dhGetGenerator(encoding) {
+  var generator = this._handle.getGenerator();
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  if (encoding &#x26;&#x26; encoding !== &#x27;buffer&#x27;)
+    generator = generator.toString(encoding);
+  return generator;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.getPrime" id="apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.getPrime">
+        function <span class="apidocSignatureSpan">crypto-browserify.DiffieHellmanGroup.prototype.</span>getPrime
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dhGetPrime(encoding) {
+  var prime = this._handle.getPrime();
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  if (encoding &#x26;&#x26; encoding !== &#x27;buffer&#x27;)
+    prime = prime.toString(encoding);
+  return prime;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.getPrivateKey" id="apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.getPrivateKey">
+        function <span class="apidocSignatureSpan">crypto-browserify.DiffieHellmanGroup.prototype.</span>getPrivateKey
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dhGetPrivateKey(encoding) {
+  var key = this._handle.getPrivateKey();
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  if (encoding &#x26;&#x26; encoding !== &#x27;buffer&#x27;)
+    key = key.toString(encoding);
+  return key;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.getPublicKey" id="apidoc.element.crypto-browserify.DiffieHellmanGroup.prototype.getPublicKey">
+        function <span class="apidocSignatureSpan">crypto-browserify.DiffieHellmanGroup.prototype.</span>getPublicKey
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dhGetPublicKey(encoding) {
+  var key = this._handle.getPublicKey();
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  if (encoding &#x26;&#x26; encoding !== &#x27;buffer&#x27;)
+    key = key.toString(encoding);
+  return key;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Hash" id="apidoc.module.crypto-browserify.Hash">module crypto-browserify.Hash</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hash.Hash" id="apidoc.element.crypto-browserify.Hash.Hash">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Hash
+        <span class="apidocSignatureSpan">(algorithm, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Hash(algorithm, options) {
+  if (!(this instanceof Hash))
+    return new Hash(algorithm, options);
+  this._handle = new binding.Hash(algorithm);
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hash.super_" id="apidoc.element.crypto-browserify.Hash.super_">
+        function <span class="apidocSignatureSpan">crypto-browserify.Hash.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LazyTransform(options) {
+  this._options = options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Hash.prototype" id="apidoc.module.crypto-browserify.Hash.prototype">module crypto-browserify.Hash.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hash.prototype._flush" id="apidoc.element.crypto-browserify.Hash.prototype._flush">
+        function <span class="apidocSignatureSpan">crypto-browserify.Hash.prototype.</span>_flush
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_flush = function (callback) {
+  this.push(this._handle.digest());
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hash.prototype._transform" id="apidoc.element.crypto-browserify.Hash.prototype._transform">
+        function <span class="apidocSignatureSpan">crypto-browserify.Hash.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_transform = function (chunk, encoding, callback) {
+  this._handle.update(chunk, encoding);
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hash.prototype.digest" id="apidoc.element.crypto-browserify.Hash.prototype.digest">
+        function <span class="apidocSignatureSpan">crypto-browserify.Hash.prototype.</span>digest
+        <span class="apidocSignatureSpan">(outputEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">digest = function (outputEncoding) {
+  outputEncoding = outputEncoding || exports.DEFAULT_ENCODING;
+  return this._handle.digest(outputEncoding);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hash.prototype.update" id="apidoc.element.crypto-browserify.Hash.prototype.update">
+        function <span class="apidocSignatureSpan">crypto-browserify.Hash.prototype.</span>update
+        <span class="apidocSignatureSpan">(data, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (data, encoding) {
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  this._handle.update(data, encoding);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Hmac" id="apidoc.module.crypto-browserify.Hmac">module crypto-browserify.Hmac</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hmac.Hmac" id="apidoc.element.crypto-browserify.Hmac.Hmac">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>Hmac
+        <span class="apidocSignatureSpan">(hmac, key, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Hmac(hmac, key, options) {
+  if (!(this instanceof Hmac))
+    return new Hmac(hmac, key, options);
+  this._handle = new binding.Hmac();
+  this._handle.init(hmac, toBuf(key));
+  LazyTransform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hmac.super_" id="apidoc.element.crypto-browserify.Hmac.super_">
+        function <span class="apidocSignatureSpan">crypto-browserify.Hmac.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LazyTransform(options) {
+  this._options = options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.Hmac.prototype" id="apidoc.module.crypto-browserify.Hmac.prototype">module crypto-browserify.Hmac.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hmac.prototype._flush" id="apidoc.element.crypto-browserify.Hmac.prototype._flush">
+        function <span class="apidocSignatureSpan">crypto-browserify.Hmac.prototype.</span>_flush
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_flush = function (callback) {
+  this.push(this._handle.digest());
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hmac.prototype._transform" id="apidoc.element.crypto-browserify.Hmac.prototype._transform">
+        function <span class="apidocSignatureSpan">crypto-browserify.Hmac.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_transform = function (chunk, encoding, callback) {
+  this._handle.update(chunk, encoding);
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hmac.prototype.digest" id="apidoc.element.crypto-browserify.Hmac.prototype.digest">
+        function <span class="apidocSignatureSpan">crypto-browserify.Hmac.prototype.</span>digest
+        <span class="apidocSignatureSpan">(outputEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">digest = function (outputEncoding) {
+  outputEncoding = outputEncoding || exports.DEFAULT_ENCODING;
+  return this._handle.digest(outputEncoding);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.Hmac.prototype.update" id="apidoc.element.crypto-browserify.Hmac.prototype.update">
+        function <span class="apidocSignatureSpan">crypto-browserify.Hmac.prototype.</span>update
+        <span class="apidocSignatureSpan">(data, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (data, encoding) {
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  this._handle.update(data, encoding);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.createDiffieHellman" id="apidoc.module.crypto-browserify.createDiffieHellman">module crypto-browserify.createDiffieHellman</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDiffieHellman.createDiffieHellman" id="apidoc.element.crypto-browserify.createDiffieHellman.createDiffieHellman">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createDiffieHellman
+        <span class="apidocSignatureSpan">(sizeOrKey, keyEncoding, generator, genEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DiffieHellman(sizeOrKey, keyEncoding, generator, genEncoding) {
+  if (!(this instanceof DiffieHellman))
+    return new DiffieHellman(sizeOrKey, keyEncoding, generator, genEncoding);
+
+  if (!(sizeOrKey instanceof Buffer) &#x26;&#x26;
+      typeof sizeOrKey !== &#x27;number&#x27; &#x26;&#x26;
+      typeof sizeOrKey !== &#x27;string&#x27;)
+    throw new TypeError(&#x27;First argument should be number, string or Buffer&#x27;);
+
+  if (keyEncoding) {
+    if (typeof keyEncoding !== &#x27;string&#x27; ||
+        (!Buffer.isEncoding(keyEncoding) &#x26;&#x26; keyEncoding !== &#x27;buffer&#x27;)) {
+      genEncoding = generator;
+      generator = keyEncoding;
+      keyEncoding = false;
+    }
+  }
+
+  keyEncoding = keyEncoding || exports.DEFAULT_ENCODING;
+  genEncoding = genEncoding || exports.DEFAULT_ENCODING;
+
+  if (typeof sizeOrKey !== &#x27;number&#x27;)
+    sizeOrKey = toBuf(sizeOrKey, keyEncoding);
+
+  if (!generator)
+    generator = DH_GENERATOR;
+  else if (typeof generator !== &#x27;number&#x27;)
+    generator = toBuf(generator, genEncoding);
+
+  this._handle = new binding.DiffieHellman(sizeOrKey, generator);
+  Object.defineProperty(this, &#x27;verifyError&#x27;, {
+    enumerable: true,
+    value: this._handle.verifyError,
+    writable: false
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.createDiffieHellman.prototype" id="apidoc.module.crypto-browserify.createDiffieHellman.prototype">module crypto-browserify.createDiffieHellman.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.computeSecret" id="apidoc.element.crypto-browserify.createDiffieHellman.prototype.computeSecret">
+        function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>computeSecret
+        <span class="apidocSignatureSpan">(key, inEnc, outEnc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dhComputeSecret(key, inEnc, outEnc) {
+  inEnc = inEnc || exports.DEFAULT_ENCODING;
+  outEnc = outEnc || exports.DEFAULT_ENCODING;
+  var ret = this._handle.computeSecret(toBuf(key, inEnc));
+  if (outEnc &#x26;&#x26; outEnc !== &#x27;buffer&#x27;)
+    ret = ret.toString(outEnc);
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.generateKeys" id="apidoc.element.crypto-browserify.createDiffieHellman.prototype.generateKeys">
+        function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>generateKeys
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dhGenerateKeys(encoding) {
+  var keys = this._handle.generateKeys();
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  if (encoding &#x26;&#x26; encoding !== &#x27;buffer&#x27;)
+    keys = keys.toString(encoding);
+  return keys;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.getGenerator" id="apidoc.element.crypto-browserify.createDiffieHellman.prototype.getGenerator">
+        function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>getGenerator
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dhGetGenerator(encoding) {
+  var generator = this._handle.getGenerator();
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  if (encoding &#x26;&#x26; encoding !== &#x27;buffer&#x27;)
+    generator = generator.toString(encoding);
+  return generator;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.getPrime" id="apidoc.element.crypto-browserify.createDiffieHellman.prototype.getPrime">
+        function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>getPrime
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dhGetPrime(encoding) {
+  var prime = this._handle.getPrime();
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  if (encoding &#x26;&#x26; encoding !== &#x27;buffer&#x27;)
+    prime = prime.toString(encoding);
+  return prime;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.getPrivateKey" id="apidoc.element.crypto-browserify.createDiffieHellman.prototype.getPrivateKey">
+        function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>getPrivateKey
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dhGetPrivateKey(encoding) {
+  var key = this._handle.getPrivateKey();
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  if (encoding &#x26;&#x26; encoding !== &#x27;buffer&#x27;)
+    key = key.toString(encoding);
+  return key;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.getPublicKey" id="apidoc.element.crypto-browserify.createDiffieHellman.prototype.getPublicKey">
+        function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>getPublicKey
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dhGetPublicKey(encoding) {
+  var key = this._handle.getPublicKey();
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  if (encoding &#x26;&#x26; encoding !== &#x27;buffer&#x27;)
+    key = key.toString(encoding);
+  return key;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.setPrivateKey" id="apidoc.element.crypto-browserify.createDiffieHellman.prototype.setPrivateKey">
+        function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>setPrivateKey
+        <span class="apidocSignatureSpan">(key, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setPrivateKey = function (key, encoding) {
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  this._handle.setPrivateKey(toBuf(key, encoding));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createDiffieHellman.prototype.setPublicKey" id="apidoc.element.crypto-browserify.createDiffieHellman.prototype.setPublicKey">
+        function <span class="apidocSignatureSpan">crypto-browserify.createDiffieHellman.prototype.</span>setPublicKey
+        <span class="apidocSignatureSpan">(key, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setPublicKey = function (key, encoding) {
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  this._handle.setPublicKey(toBuf(key, encoding));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.createSign" id="apidoc.module.crypto-browserify.createSign">module crypto-browserify.createSign</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createSign.createSign" id="apidoc.element.crypto-browserify.createSign.createSign">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createSign
+        <span class="apidocSignatureSpan">(algorithm, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sign(algorithm, options) {
+  if (!(this instanceof Sign))
+    return new Sign(algorithm, options);
+  this._handle = new binding.Sign();
+  this._handle.init(algorithm);
+
+  stream.Writable.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createSign.super_" id="apidoc.element.crypto-browserify.createSign.super_">
+        function <span class="apidocSignatureSpan">crypto-browserify.createSign.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Writable(options) {
+  // Writable ctor is applied to Duplexes, too.
+  // `realHasInstance` is necessary because using plain `instanceof`
+  // would return false, as no `_writableState` property is attached.
+
+  // Trying to use the custom `instanceof` for Writable here will also break the
+  // Node.js LazyTransform implementation, which has a non-trivial getter for
+  // `_writableState` that would lead to infinite recursion.
+  if (!(realHasInstance.call(Writable, this)) &#x26;&#x26;
+      !(this instanceof Stream.Duplex)) {
+    return new Writable(options);
+  }
+
+  this._writableState = new WritableState(options, this);
+
+  // legacy.
+  this.writable = true;
+
+  if (options) {
+    if (typeof options.write === &#x27;function&#x27;)
+      this._write = options.write;
+
+    if (typeof options.writev === &#x27;function&#x27;)
+      this._writev = options.writev;
+  }
+
+  Stream.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.createSign.prototype" id="apidoc.module.crypto-browserify.createSign.prototype">module crypto-browserify.createSign.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createSign.prototype._write" id="apidoc.element.crypto-browserify.createSign.prototype._write">
+        function <span class="apidocSignatureSpan">crypto-browserify.createSign.prototype.</span>_write
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, encoding, callback) {
+  this._handle.update(chunk, encoding);
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createSign.prototype.sign" id="apidoc.element.crypto-browserify.createSign.prototype.sign">
+        function <span class="apidocSignatureSpan">crypto-browserify.createSign.prototype.</span>sign
+        <span class="apidocSignatureSpan">(options, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sign = function (options, encoding) {
+  if (!options)
+    throw new Error(&#x27;No key provided to sign&#x27;);
+
+  var key = options.key || options;
+  var passphrase = options.passphrase || null;
+  var ret = this._handle.sign(toBuf(key), null, passphrase);
+
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  if (encoding &#x26;&#x26; encoding !== &#x27;buffer&#x27;)
+    ret = ret.toString(encoding);
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createSign.prototype.update" id="apidoc.element.crypto-browserify.createSign.prototype.update">
+        function <span class="apidocSignatureSpan">crypto-browserify.createSign.prototype.</span>update
+        <span class="apidocSignatureSpan">(data, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (data, encoding) {
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  this._handle.update(data, encoding);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.createVerify" id="apidoc.module.crypto-browserify.createVerify">module crypto-browserify.createVerify</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createVerify.createVerify" id="apidoc.element.crypto-browserify.createVerify.createVerify">
+        function <span class="apidocSignatureSpan">crypto-browserify.</span>createVerify
+        <span class="apidocSignatureSpan">(algorithm, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Verify(algorithm, options) {
+  if (!(this instanceof Verify))
+    return new Verify(algorithm, options);
+
+  this._handle = new binding.Verify();
+  this._handle.init(algorithm);
+
+  stream.Writable.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createVerify.super_" id="apidoc.element.crypto-browserify.createVerify.super_">
+        function <span class="apidocSignatureSpan">crypto-browserify.createVerify.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Writable(options) {
+  // Writable ctor is applied to Duplexes, too.
+  // `realHasInstance` is necessary because using plain `instanceof`
+  // would return false, as no `_writableState` property is attached.
+
+  // Trying to use the custom `instanceof` for Writable here will also break the
+  // Node.js LazyTransform implementation, which has a non-trivial getter for
+  // `_writableState` that would lead to infinite recursion.
+  if (!(realHasInstance.call(Writable, this)) &#x26;&#x26;
+      !(this instanceof Stream.Duplex)) {
+    return new Writable(options);
+  }
+
+  this._writableState = new WritableState(options, this);
+
+  // legacy.
+  this.writable = true;
+
+  if (options) {
+    if (typeof options.write === &#x27;function&#x27;)
+      this._write = options.write;
+
+    if (typeof options.writev === &#x27;function&#x27;)
+      this._writev = options.writev;
+  }
+
+  Stream.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.crypto-browserify.createVerify.prototype" id="apidoc.module.crypto-browserify.createVerify.prototype">module crypto-browserify.createVerify.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createVerify.prototype._write" id="apidoc.element.crypto-browserify.createVerify.prototype._write">
+        function <span class="apidocSignatureSpan">crypto-browserify.createVerify.prototype.</span>_write
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, encoding, callback) {
+  this._handle.update(chunk, encoding);
+  callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createVerify.prototype.update" id="apidoc.element.crypto-browserify.createVerify.prototype.update">
+        function <span class="apidocSignatureSpan">crypto-browserify.createVerify.prototype.</span>update
+        <span class="apidocSignatureSpan">(data, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (data, encoding) {
+  encoding = encoding || exports.DEFAULT_ENCODING;
+  this._handle.update(data, encoding);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.crypto-browserify.createVerify.prototype.verify" id="apidoc.element.crypto-browserify.createVerify.prototype.verify">
+        function <span class="apidocSignatureSpan">crypto-browserify.createVerify.prototype.</span>verify
+        <span class="apidocSignatureSpan">(object, signature, sigEncoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verify = function (object, signature, sigEncoding) {
+  sigEncoding = sigEncoding || exports.DEFAULT_ENCODING;
+  return this._handle.verify(toBuf(object), toBuf(signature, sigEncoding));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
