@@ -1,35 +1,38 @@
-<svg height="510" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="510" fill="#555" width="720"></rect>
+<svg height="558" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="558" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">└─┬ crypto-browserify@3.11.0 </tspan>
-<tspan x="10" y="42">  ├─┬ browserify-cipher@1.0.0 </tspan>
-<tspan x="10" y="58">  │ ├─┬ browserify-aes@1.0.6 </tspan>
-<tspan x="10" y="74">  │ │ └── buffer-xor@1.0.3 </tspan>
-<tspan x="10" y="90">  │ ├─┬ browserify-des@1.0.0 </tspan>
-<tspan x="10" y="106">  │ │ └── des.js@1.0.0 </tspan>
-<tspan x="10" y="122">  │ └── evp_bytestokey@1.0.0 </tspan>
-<tspan x="10" y="138">  ├─┬ browserify-sign@4.0.4 </tspan>
-<tspan x="10" y="154">  │ ├── bn.js@4.11.6 </tspan>
-<tspan x="10" y="170">  │ ├── browserify-rsa@4.0.1 </tspan>
-<tspan x="10" y="186">  │ ├─┬ elliptic@6.4.0 </tspan>
-<tspan x="10" y="202">  │ │ ├── brorand@1.1.0 </tspan>
-<tspan x="10" y="218">  │ │ ├── hash.js@1.0.3 </tspan>
-<tspan x="10" y="234">  │ │ ├── hmac-drbg@1.0.0 </tspan>
-<tspan x="10" y="250">  │ │ ├── minimalistic-assert@1.0.0 </tspan>
-<tspan x="10" y="266">  │ │ └── minimalistic-crypto-utils@1.0.1 </tspan>
-<tspan x="10" y="282">  │ └─┬ parse-asn1@5.1.0 </tspan>
-<tspan x="10" y="298">  │   └── asn1.js@4.9.1 </tspan>
-<tspan x="10" y="314">  ├── create-ecdh@4.0.0 </tspan>
-<tspan x="10" y="330">  ├─┬ create-hash@1.1.2 </tspan>
-<tspan x="10" y="346">  │ ├── cipher-base@1.0.3 </tspan>
-<tspan x="10" y="362">  │ ├── ripemd160@1.0.1 </tspan>
-<tspan x="10" y="378">  │ └── sha.js@2.4.8 </tspan>
-<tspan x="10" y="394">  ├── create-hmac@1.1.4 </tspan>
-<tspan x="10" y="410">  ├─┬ diffie-hellman@5.0.2 </tspan>
-<tspan x="10" y="426">  │ └── miller-rabin@4.0.0 </tspan>
-<tspan x="10" y="442">  ├── inherits@2.0.3 </tspan>
-<tspan x="10" y="458">  ├── pbkdf2@3.0.9 </tspan>
-<tspan x="10" y="474">  ├── public-encrypt@4.0.0 </tspan>
-<tspan x="10" y="490">  └── randombytes@2.0.3</tspan>
+<tspan x="10" y="26">2 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ crypto-browserify@3.11.0 </tspan>
+<tspan x="10" y="90">  ├─┬ browserify-cipher@1.0.0 </tspan>
+<tspan x="10" y="106">  │ ├─┬ browserify-aes@1.0.6 </tspan>
+<tspan x="10" y="122">  │ │ └── buffer-xor@1.0.3 </tspan>
+<tspan x="10" y="138">  │ ├─┬ browserify-des@1.0.0 </tspan>
+<tspan x="10" y="154">  │ │ └── des.js@1.0.0 </tspan>
+<tspan x="10" y="170">  │ └── evp_bytestokey@1.0.0 </tspan>
+<tspan x="10" y="186">  ├─┬ browserify-sign@4.0.4 </tspan>
+<tspan x="10" y="202">  │ ├── bn.js@4.11.6 </tspan>
+<tspan x="10" y="218">  │ ├── browserify-rsa@4.0.1 </tspan>
+<tspan x="10" y="234">  │ ├─┬ elliptic@6.4.0 </tspan>
+<tspan x="10" y="250">  │ │ ├── brorand@1.1.0 </tspan>
+<tspan x="10" y="266">  │ │ ├── hash.js@1.0.3 </tspan>
+<tspan x="10" y="282">  │ │ ├── hmac-drbg@1.0.1 </tspan>
+<tspan x="10" y="298">  │ │ ├── minimalistic-assert@1.0.0 </tspan>
+<tspan x="10" y="314">  │ │ └── minimalistic-crypto-utils@1.0.1 </tspan>
+<tspan x="10" y="330">  │ └─┬ parse-asn1@5.1.0 </tspan>
+<tspan x="10" y="346">  │   └── asn1.js@4.9.1 </tspan>
+<tspan x="10" y="362">  ├── create-ecdh@4.0.0 </tspan>
+<tspan x="10" y="378">  ├─┬ create-hash@1.1.2 </tspan>
+<tspan x="10" y="394">  │ ├── cipher-base@1.0.3 </tspan>
+<tspan x="10" y="410">  │ ├── ripemd160@1.0.1 </tspan>
+<tspan x="10" y="426">  │ └── sha.js@2.4.8 </tspan>
+<tspan x="10" y="442">  ├── create-hmac@1.1.4 </tspan>
+<tspan x="10" y="458">  ├─┬ diffie-hellman@5.0.2 </tspan>
+<tspan x="10" y="474">  │ └── miller-rabin@4.0.0 </tspan>
+<tspan x="10" y="490">  ├── inherits@2.0.3 </tspan>
+<tspan x="10" y="506">  ├── pbkdf2@3.0.9 </tspan>
+<tspan x="10" y="522">  ├── public-encrypt@4.0.0 </tspan>
+<tspan x="10" y="538">  └── randombytes@2.0.3</tspan>
 </text>
 </svg>
